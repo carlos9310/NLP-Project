@@ -1,6 +1,6 @@
 {
   "model_name": "transformer",
-  "epochs": 2,
+  "epochs": 1,
   "checkpoint_every": 100,
   "eval_every": 100,
   "learning_rate": 1e-3,
