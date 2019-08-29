@@ -65,7 +65,7 @@ class Predictor(PredictorBase):
                 根据config文件选择对应的模型，并初始化
                 :return:
                 """
-        if self.config["model_name"] == "weibo":
+        if self.config["model_name"] == "textcnn":
             self.model = TextCnnModel(config=self.config, vocab_size=self.vocab_size, word_vectors=self.word_vectors)
         elif self.config["model_name"] == "bilstm":
             self.model = BiLstmModel(config=self.config, vocab_size=self.vocab_size, word_vectors=self.word_vectors)
