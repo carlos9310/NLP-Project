@@ -2,6 +2,7 @@ import json
 import jieba
 from predict import Predictor
 import argparse
+import os
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--config_path", help="config path of model")
