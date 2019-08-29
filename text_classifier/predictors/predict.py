@@ -85,7 +85,7 @@ class Predictor(PredictorBase):
         sentence_ids = self.sentence_to_idx(sentence)
 
         prediction = self.model.infer(self.sess, [sentence_ids]).tolist()[0]
-        label = self.index_to_label[prediction]
+        label = self.index_to_label[prediction[0]]
         return label
 
 
