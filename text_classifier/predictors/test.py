@@ -8,7 +8,8 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--config_path", help="config path of model")
 args = parser.parse_args()
 
-with open(os.path.join(os.path.abspath(os.path.dirname(os.getcwd())), args.config_path), "r") as fr:
+# 当前目录的上一级目录
+with open(os.path.join(os.path.dirname(os.getcwd()), args.config_path), "r") as fr:
     config = json.load(fr)
 
 
