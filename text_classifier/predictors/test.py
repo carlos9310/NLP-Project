@@ -16,7 +16,7 @@ with open(os.path.join(os.path.dirname(os.getcwd()), args.config_path), "r") as 
 # with open("E:/jiangxinyang/pa_smart_city_nlp/text_classifier/config/mlp_config.json", "r") as fr:
 #     config = json.load(fr)
 
-with open(os.path.join(os.path.dirname(os.getcwd()), "data/imdb/test_data.txt"), "r", encoding="utf8") as f:
+with open(os.path.join(os.path.dirname(os.getcwd()), "data/imdb/eval_data.txt"), "r", encoding="utf8") as f:
     data = [line for line in f.readlines()]
     inputs = []
     labels = []
