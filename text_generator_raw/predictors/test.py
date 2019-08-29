@@ -2,9 +2,16 @@ import json
 import jieba
 from predict import Predictor
 
+import argparse
 
-with open("E:/jiangxinyang/pa_smart_city_nlp/text_generator/config/seq2seq_bigru_config.json", "r") as fr:
+parser = argparse.ArgumentParser()
+parser.add_argument("--config_path", help="config path of model")
+
+with open(os.path.join(os.path.abspath(os.path.dirname(os.getcwd())), args.config_path), "r") as fr:
     config = json.load(fr)
+
+# with open("E:/jiangxinyang/pa_smart_city_nlp/text_generator/config/seq2seq_bigru_config.json", "r") as fr:
+#     config = json.load(fr)
 
 predictor = Predictor(config)
 text = jieba.lcut("你们想干嘛")
